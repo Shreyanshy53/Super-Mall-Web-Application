@@ -1,0 +1,57 @@
+<!-- shops.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Shop List - Super Mall</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .shop-card {
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 10px;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+    }
+  </style>
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+  <h2>All Shops</h2>
+  <div id="shopList"></div>
+  <h2>All Shops</h2>
+
+  <!-- Filters -->
+  <label>Filter by Category:</label>
+  <select id="categoryFilter">
+    <option value="">All</option>
+    <option value="Grocery">Grocery</option>
+    <option value="Clothing">Clothing</option>
+    <option value="Electronics">Electronics</option>
+  </select>
+  
+  <label>Filter by Floor:</label>
+  <select id="floorFilter">
+    <option value="">All</option>
+    <option value="Ground">Ground</option>
+    <option value="First">First</option>
+    <option value="Second">Second</option>
+  </select>
+  
+  <div id="shopList"></div>
+  
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+<!-- Firebase Config -->
+<script src="js/firebaseConfig.js"></script>
+
+<!-- Shop Logic -->
+<script src="js/shops.js"></script>
+
+
+
+
+</body>
+</html>

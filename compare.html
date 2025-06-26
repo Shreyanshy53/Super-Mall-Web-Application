@@ -1,0 +1,44 @@
+<!-- compare.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Compare Offers</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .compare-container {
+      display: flex;
+      justify-content: space-around;
+      padding: 20px;
+    }
+    .offer-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      width: 40%;
+      border-radius: 8px;
+      background: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <h2>Compare Offers</h2>
+
+  <label>Select Offer 1:</label>
+  <select id="offer1"></select>
+
+  <label>Select Offer 2:</label>
+  <select id="offer2"></select>
+
+  <button onclick="compareOffers()">Compare</button>
+
+  <div class="compare-container" id="comparisonResult"></div>
+
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+
+  <!-- Firebase Config & Script -->
+  <script src="js/firebaseConfig.js"></script>
+  <script src="js/compare.js"></script>
+</body>
+</html>
+

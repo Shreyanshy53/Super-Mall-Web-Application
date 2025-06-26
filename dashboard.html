@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard - Super Mall</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <h2>Admin Dashboard</h2>
+
+  <!-- ✅ Logout Button -->
+  <button onclick="firebase.auth().signOut().then(() => window.location.href = 'login.html');">
+    Logout
+  </button>
+
+  <!-- ✅ Add Shop Form -->
+  <form id="shopForm">
+    <input type="text" id="shopName" placeholder="Shop Name" required><br>
+    <input type="text" id="category" placeholder="Category" required><br>
+    <input type="text" id="floor" placeholder="Floor" required><br>
+    <input type="text" id="merchantName" placeholder="Merchant Name" required><br>
+    <input type="text" id="location" placeholder="Location/URL" required><br>
+    <button type="submit">Add Shop</button>
+  </form>
+
+  <p id="status"></p>
+
+  <!-- ✅ Add Offer Form -->
+  <h2>Add Offer</h2>
+  <form id="offerForm">
+    <input type="text" id="productName" placeholder="Product Name" required />
+    <input type="text" id="shopId" placeholder="Shop ID" required />
+    <input type="number" id="price" placeholder="Price" required />
+    <input type="number" id="discount" placeholder="Discount %" required />
+    <button type="submit">Add Offer</button>
+  </form>
+
+  <!-- ✅ Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth-compat.js"></script>
+
+  <!-- ✅ Firebase Config -->
+  <script>
+    const firebaseConfig = {
+      apiKey: "AIzaSyBfDcCaVZDCDrA1VD8eZZcMjCTG2XnOjLc",
+      authDomain: "supermall-webapp-9d7ad.firebaseapp.com",
+      projectId: "supermall-webapp-9d7ad",
+      storageBucket: "supermall-webapp-9d7ad.firebasestorage.app",
+      messagingSenderId: "573893743634",
+      appId: "1:573893743634:web:dda7fd414916930afbb4cb"
+    };
+    firebase.initializeApp(firebaseConfig);
+  </script>
+
+  <!-- ✅ Auth Check -->
+  <script>
+    firebase.auth().onAuthStateChanged(function(user) {
+      if (!user) {
+        window.location.href = "login.html";
+      }
+    });
+  </script>
+
+  <!-- ✅ Logger and Dashboard Logic -->
+  <script src="js/logger.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
