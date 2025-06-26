@@ -80,14 +80,12 @@ In many rural regions, merchants and small businesses face challenges in reachin
 1. **Clone this repo**:
    ```bash
    git clone https://github.com/your-username/supermall-webapp.git
+```
 Open the project using Live Server in VS Code
 OR double-click dashboard.html to run in browser.
 
 Configure Firebase in js/firebaseConfig.js:
-
-js
-Copy
-Edit
+```
 const firebaseConfig = {
   apiKey: "YOUR_API_KEY",
   authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
@@ -96,7 +94,7 @@ const firebaseConfig = {
   messagingSenderId: "YOUR_MESSAGING_ID",
   appId: "YOUR_APP_ID"
 };
-
+```
 firebase.initializeApp(firebaseConfig);
 Go to Firebase Console → Authentication → Users → Add user
 Create the following test user manually:
